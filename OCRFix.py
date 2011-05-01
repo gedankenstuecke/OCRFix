@@ -51,6 +51,8 @@ def comparer(identifier):
 		print "please pass length of the column that will be extracted:"
 		print "e.g. python csvexport.py filename.csv 43 10"
 	else: 
+		for current in identifier:
+			current[int(sys.argv[2])-1] = current[int(sys.argv[2])-1].upper()
 			
 		for current in identifier:
 			if len(current[int(sys.argv[2])-1]) != int(sys.argv[3]):
